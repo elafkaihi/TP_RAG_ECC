@@ -16,7 +16,7 @@ from rich.panel import Panel
 from rich.table import Table
 
 # Import the combined implementation
-from scientific_paper_rag import (
+from model_scientific_paper import (
     create_rag_system, 
     ScientificPaperRAG, 
     load_config, 
@@ -31,7 +31,11 @@ console = Console()
 
 def get_rag_system() -> ScientificPaperRAG:
     """Get RAG system instance."""
-    return create_rag_system()
+    try:
+        return create_rag_system()
+    except Exception as e:
+        console.print(f"[bold red]Error creating RAG system: {str(e)}[/bold red]")
+        raise typer.Exit(code=1)
 
 
 @app.command("index")
@@ -47,7 +51,11 @@ def index_documents(
     console.print(Panel("Indexing Documents", style="bold blue"))
     
     # Load config
-    config = load_config()
+    try:
+        config = load_config()
+    except Exception as e:
+        console.print(f"[bold red]Error loading configuration: {str(e)}[/bold red]")
+        raise typer.Exit(code=1)
     
     # Use provided data directory or default from config
     if data_dir:
@@ -55,6 +63,15 @@ def index_documents(
     else:
         data_dir = config["paths"]["data_dir"]
         console.print(f"Using default data directory: [bold]{data_dir}[/bold]")
+    
+    # Check if directory exists
+    if not os.path.exists(data_dir):
+        console.print(f"[bold yellow]Directory {data_dir} does not exist. Creating it...[/bold yellow]")
+        try:
+            os.makedirs(data_dir)
+        except Exception as e:
+            console.print(f"[bold red]Error creating directory: {str(e)}[/bold red]")
+            raise typer.Exit(code=1)
     
     # Create and index
     try:
@@ -221,6 +238,11 @@ def evaluate_system(
     console.print(Panel("Evaluating RAG System", style="bold blue"))
     
     try:
+        # Check if questions file exists
+        if not os.path.exists(questions_file):
+            console.print(f"[bold red]Questions file not found: {questions_file}[/bold red]")
+            raise typer.Exit(code=1)
+            
         # Load questions
         with open(questions_file, "r") as f:
             questions = json.load(f)
