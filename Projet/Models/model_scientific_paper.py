@@ -46,8 +46,8 @@ CONFIG = {
     
     # Document Processing
     "document_processing": {
-        "chunk_size": 500,  # Reduced chunk size to avoid context length issues
-        "chunk_overlap": 100,
+        "chunk_size": 200,  # Reduced chunk size to avoid context length issues
+        "chunk_overlap": 50,
         "markdown_headings_splitter": True
     },
     
@@ -72,7 +72,7 @@ CONFIG = {
     # LLM
     "llm": {
         # Smaller, faster model that works well with the constraints
-        "model_name": "google/flan-t5-small",
+        "model_name": "facebook/bart-large-cnn",
         "max_tokens": 256,
         "temperature": 0.0,  # No randomness for deterministic outputs
         "context_window": 512
