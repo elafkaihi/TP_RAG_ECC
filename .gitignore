@@ -1,0 +1,31 @@
+# Fichiers générés par Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Fichiers d'environnement local (par exemple fichiers contenant des clés API, variables d'environnement, config privée)
+.env
+config.json
+
+# Fichiers et répertoires spécifiques aux IDE
+.vscode/
+.idea/
+
+# Fichiers de log
+*.log
+
+# Fichiers temporaires générés par les éditeurs (ex : Vim, Emacs, etc.)
+*.swp
+*.swo
+
+# Fichiers spécifiques à un environnement Docker (si applicable)
+docker-compose.yml
+Dockerfile
+
+# Dossiers temporaires
+tmp/
+temp/
+
+# Fichiers de données sensibles ou locaux
+secrets/
+local_config.py
