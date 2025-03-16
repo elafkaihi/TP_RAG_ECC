@@ -1,0 +1,7 @@
+-Financial reports:
+    File: Management Report Q1 2024 PDFS.PDF
+    Prompts:
+        1- what are the key financial results used? 
+        2- what are financial results of this quarter.
+        3- In which quarter are we?
+

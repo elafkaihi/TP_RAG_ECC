@@ -1,10 +1,12 @@
 # TP_RAG_ECC
 
-requirements: 
-- Python 3.10 (pour l'utilisation de faiss-gpu) or higher (faiss-cpu)
-- PyPDF2 or pdfplumber faiss-cpu (ou faiss-gpu)
-- streamlit
-- sentence-transformers, transformers, torch
-- numpy, tqdm
-- accelerate>=0.26.0
+Interface Streamlit pour télécharger un document avec prompting.
+
+Use cases:
+    - Rapports financiers
+    - Papiers de recherche (NLP)
+    - Documents juridiques
+
+
+Le modèle peut actuellement ingérer des documents et répondre aux questions en anglais.
 

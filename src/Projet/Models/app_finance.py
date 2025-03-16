@@ -53,7 +53,7 @@ st.title("Assistant de document PDF 📑")
 with st.sidebar:
     st.header("Configuration")
     
-    uploaded_file = st.file_uploader("Télécharger un document PDF", type=['pdf'])
+    uploaded_file = st.file_uploader("Télécharger un document PDF (en anglais de préference)", type=['pdf'])
     
     if uploaded_file is not None:
         # Si un nouveau fichier est téléchargé et différent du fichier précédent, nettoyer les données
@@ -116,7 +116,7 @@ if st.session_state["file_processed"]:
     st.subheader(f"Document actuel: {st.session_state['processed_file']}")
     
     # Zone de requête
-    query = st.text_input("Posez une question sur le document:")
+    query = st.text_input("Posez une question sur le document (en anglais de préférence):")
     
     if query:
         with st.spinner("Recherche de la réponse..."):

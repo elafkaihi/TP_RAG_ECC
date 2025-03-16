@@ -35,11 +35,8 @@ def main():
     
     # Définir les chemins vers les applications Streamlit
     app_fin_path = os.path.join(models_dir, "app_finance.py")
-    #app_law_path = os.path.join(models_dir, "app2.py") etc
     
-    
-    if 1 == 1: #A changer
-        run_streamlit_app(app_fin_path)
+    run_streamlit_app(app_fin_path)
 
 
 if __name__ == "__main__":
