@@ -5,3 +5,8 @@
         2- what are financial results of this quarter.
         3- In which quarter are we?
 
+- Scientific research paper : 
+    File: Attention_paper.pdf
+    Prompts:
+        1- What is the main advantage of Transformers over traditional RNN models in terms of parallelization? 
+        2- How many layers are used in the base Transformer architecture described in the paper?
