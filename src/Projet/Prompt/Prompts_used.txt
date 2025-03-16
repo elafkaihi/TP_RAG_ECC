@@ -10,3 +10,9 @@
     Prompts:
         1- What is the main advantage of Transformers over traditional RNN models in terms of parallelization? 
         2- How many layers are used in the base Transformer architecture described in the paper?
+
+- Legal Documents:
+    File: Droit.pdf
+    Prompts:
+    1- What is the main topic of the document?
+    2- What is the main idea of Article 4?
