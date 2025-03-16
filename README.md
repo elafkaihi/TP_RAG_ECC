@@ -13,7 +13,7 @@ Use cases:
 
 Le modèle peut actuellement ingérer des documents et répondre aux questions en anglais.
 
-Les documents et prompts utilisés pour tester not modèle se trouvent dans les dossiers src\Projet\Prompt ET src\Projet\Documents respectueusement.
+Les documents et prompts utilisés pour tester not modèle se trouvent dans les dossiers src\Projet\Documents et src\Projet\Prompt respectueusement.
 
 
 
