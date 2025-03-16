@@ -14,3 +14,9 @@ accelerate>=0.25.0
 matplotlib>=3.8.2
 pandas>=2.1.4
 bitsandbytes>=0.41.0
+accelerate>=0.26.0
+faiss-cpu
+streamlit
+tqdm
+PyPDF2
+pdfplumber
